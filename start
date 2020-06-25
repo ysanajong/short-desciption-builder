@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Short Description Builder</title>
+ </head>
+	<form 
+	onsubmit="return false;" 
+	id="sdb" 
+	oninput="output.value=level.value+' | '+lang.value+' | '+tech.value+' | '+descr.value;">
+<p>  <table>
+   <tr>
+    <th><label for="Level">Level</label></th>
+	<td>
+	 <label> <input type="radio" name="level" value="L1">L1 </label>
+	 <label> <input type="radio" name="level" value="L2">L2 </label>
+	 <label> <input type="radio" name="level" value="SME">SME </label>
+    </td>
+   </tr>
+   <tr>
+    <th><label for="lang">Language</label></th>
+	<td>
+	 <label><input type="radio" name="lang" value="EN">None (English)</label>
+     <label><input type="radio" name="lang" value="DE">German</label>
+     <label><input type="radio" name="lang" value="ES">Spanish</label>
+     <label><input type="radio" name="lang" value="FR">French</label>
+     <label><input type="radio" name="lang" value="NL">Dutch</label>
+     <label><input type="radio" name="lang" value="IT">Italian</label>
+    </td>
+   </tr>
+   <tr>
+    <th><label for="tech">Technology</label></th>
+	<td>
+	 <input type="text" list="list-tech" name="tech" style="width:15em;">
+	 <datalist id="list-tech">
+	  <option value="Aruba">
+	  <option value="Broadcom">
+	  <option value="CheckPoint">
+	  <option value="Cisco">
+	  <option value="F5">
+	  <option value="Fortinet">
+	  <option value="Juniper">
+	  <option value="PaloAlto">
+	  <option value="PulseSecure">
+	 </datalist>
+	</tr>
+	<tr>
+	 <th><label for="descr">Description</label></th>
+	 <td>
+	  <input type="text" name="descr" style="width:25em;">
+	 </td>
+	</tr>
+	</table> 
+</p><p>
+	<table>
+	<tr>
+	 <th><label for="output"></label></th>
+	 <td>
+	  <input type="text" id="output" style="width:25em;">
+      <button id="outputCopy" onclick="output.select();document.execCommand('copy')">Copy</button>
+	 </td>
+	</tr>
+  </table> </p>  
+ </form>
+
+</html>
