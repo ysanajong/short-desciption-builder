@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ITSM - Short Description Builder</title>
 	<meta name="description" content="Short Description Builder for ITSM">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -10,22 +11,13 @@
 
 <body>
 	<div class="header">
-		<div>
-			ITSM Short Description Builder V1
-		</div>
-		<div>
-			2
-		</div>
+		<div>ITSM Short Description Builder	</div>
+		<div>V.2</div>
 		<div>LOGO</div>
-
 	</div>
 
 	<div class="container">
-
-
-		<div class="menu">
-			HERE COMES SOME MENU
-		</div>
+		<div class="menu">HERE COMES SOME MENU</div>
 		<div class="content">
 			<form id="sdb" onsubmit="return false;"
 				oninput="output.value=level.value+' | '+lang.value+' | '+tech.value+' | '+descr.value;">
@@ -86,11 +78,8 @@
 						<th><label for="output"></label></th>
 						<td>
 							<input type="text" id="output" style="width:25em;">
-							<!--
-							<button id="outputCopy" onclick="output.select();document.execCommand('copy')">Copy</button> -->
-							
-  								<button id="outputCopy" onClick="copyButton();">Copy</button>
-  								<button onClick="refresh();">Restart</button>
+							<button id="outputCopy" onClick="copyButton();">Copy</button>
+							<button onClick="refresh();">Restart</button>
 						</td>
 					</tr>
 				</table>
