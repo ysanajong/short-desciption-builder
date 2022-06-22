@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Short Description Builder</title>
- </head>
-	<form 
-	onsubmit="return false;" 
-	id="sdb" 
-	oninput="output.value=level.value+' | '+lang.value+' | '+tech.value+' | '+descr.value;">
-<p>  <table>
-   <tr>
-    <th><label for="Level">Level</label></th>
-	<td>
-	 <label> <input type="radio" name="level" value="L1">L1 </label>
-	 <label> <input type="radio" name="level" value="L2">L2 </label>
-	 <label> <input type="radio" name="level" value="SME">SME </label>
-    </td>
-   </tr>
-   <tr>
-    <th><label for="lang">Language</label></th>
-	<td>
-	 <label><input type="radio" name="lang" value="EN">None (English)</label>
-     <label><input type="radio" name="lang" value="DE">German</label>
-     <label><input type="radio" name="lang" value="ES">Spanish</label>
-     <label><input type="radio" name="lang" value="FR">French</label>
-     <label><input type="radio" name="lang" value="NL">Dutch</label>
-     <label><input type="radio" name="lang" value="IT">Italian</label>
-    </td>
-   </tr>
-   <tr>
-    <th><label for="tech">Technology</label></th>
-	<td>
-	 <input type="text" list="list-tech" name="tech" style="width:15em;">
-	 <datalist id="list-tech">
-	  <option value="Aruba">
-	  <option value="Broadcom">
-	  <option value="CheckPoint">
-		  <option value="Cisco">
-	  <option value="Cisco ASA">
-	<option value="Cisco ISE">
-	<option value="Cisco ESA">
-	  <option value="F5">
-	  <option value="FortiGate">
-	  <option value="FortiManager">
-	  <option value="FortiAnalyzer">
-	  <option value="Juniper SRX">
-	  <option value="Juniper NetScreen">
-	  <option value="PaloAlto">
-	  <option value="PulseSecure">
-	 </datalist>
-	</tr>
-	<tr>
-	 <th><label for="descr">Description</label></th>
-	 <td>
-	  <input type="text" name="descr" style="width:25em;">
-	 </td>
-	</tr>
-	</table> 
-</p><p>
-	<table>
-	<tr>
-	 <th><label for="output"></label></th>
-	 <td>
-	  <input type="text" id="output" style="width:25em;">
-      <button id="outputCopy" onclick="output.select();document.execCommand('copy')">Copy</button>
-	 </td>
-	</tr>
-  </table> </p>  
- </form>
+
+<head>
+	<meta charset="utf-8">
+	<title>ITSM - Short Description Builder</title>
+	<meta name="description" content="Short Description Builder for ITSM">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			ITSM Short Description Builder V1
+		</div>
+		<div>
+			2
+		</div>
+		<div>LOGO</div>
+
+	</div>
+
+	<div class="container">
+
+
+		<div class="menu">
+			HERE COMES SOME MENU
+		</div>
+		<div class="content">
+			<form id="sdb" onsubmit="return false;"
+				oninput="output.value=level.value+' | '+lang.value+' | '+tech.value+' | '+descr.value;">
+				<p>
+				<table>
+					<tr>
+						<th><label for="Level">Level</label></th>
+						<td>
+							<label> <input type="radio" name="level" value="L1">L1 </label>
+							<label> <input type="radio" name="level" value="L2">L2 </label>
+							<label> <input type="radio" name="level" value="SME">SME </label>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="lang">Language</label></th>
+						<td>
+							<label><input type="radio" name="lang" value="EN">None (English)</label>
+							<label><input type="radio" name="lang" value="DE">German</label>
+							<label><input type="radio" name="lang" value="ES">Spanish</label>
+							<label><input type="radio" name="lang" value="FR">French</label>
+							<label><input type="radio" name="lang" value="NL">Dutch</label>
+							<label><input type="radio" name="lang" value="IT">Italian</label>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="tech">Technology</label></th>
+						<td>
+							<input type="text" list="list-tech" name="tech" style="width:15em;">
+							<datalist id="list-tech">
+								<option value="Aruba">
+								<option value="Broadcom">
+								<option value="CheckPoint">
+								<option value="Cisco">
+								<option value="Cisco ASA">
+								<option value="Cisco ISE">
+								<option value="Cisco ESA">
+								<option value="F5">
+								<option value="FortiGate">
+								<option value="FortiManager">
+								<option value="FortiAnalyzer">
+								<option value="Juniper SRX">
+								<option value="Juniper NetScreen">
+								<option value="PaloAlto">
+								<option value="PulseSecure">
+							</datalist>
+					</tr>
+					<tr>
+						<th><label for="descr">Description</label></th>
+						<td>
+							<input type="text" name="descr" style="width:25em;">
+						</td>
+					</tr>
+				</table>
+				</p>
+				<p>
+				<table>
+					<tr>
+						<th><label for="output"></label></th>
+						<td>
+							<input type="text" id="output" style="width:25em;">
+							<!--
+							<button id="outputCopy" onclick="output.select();document.execCommand('copy')">Copy</button> -->
+							
+  								<button id="outputCopy" onClick="copyButton();">Copy</button>
+  								<button onClick="refresh();">Restart</button>
+						</td>
+					</tr>
+				</table>
+				</p>
+			</form>
+		</div>
+		<div class="footer">
+			THIS IS THE FOOTER
+		</div>
+	</div>
+	<script src="main.js" type="text/javascript"></script>
+</body>
 
 </html>
