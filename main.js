@@ -1,9 +1,14 @@
 window.onresize = screen;
-window.onload = scren;
+window.onload = screen;
 
 function screen() {
     myWidth = window.innerWidth
     myHeight = window.innerHeight
+
+    document.getElementById('witdh').innerHTML
+    = "PageWidth: " + myWidth +"px";
+    document.getElementById('height').innerHTML
+    = "PageHeight: " + myHeight +"px";
 }
 
 function copyButton() {
